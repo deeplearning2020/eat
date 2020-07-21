@@ -5,8 +5,8 @@ from PIL import Image
 
 def load_image(filename):
     img = Image.open(filename)
-    img = image.convert('RGB')
-    img = image.resize(required_size)
+    img = img.convert('RGB')
+    img = img.resize(required_size)
     pixels = np.asarray(img)
     pixels = (pixels - 127.5) / 127.5
     return pixels
