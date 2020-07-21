@@ -1,9 +1,13 @@
+import os
+import numpy as np
+from PIL import Image
+
 
 def load_image(filename):
     img = Image.open(filename)
     img = image.convert('RGB')
     img = image.resize(required_size)
-    pixels = asarray(img)
+    pixels = np.asarray(img)
     pixels = (pixels - 127.5) / 127.5
     return pixels
 
